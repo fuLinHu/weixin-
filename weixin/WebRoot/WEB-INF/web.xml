@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>weixin</display-name>
+<servlet>
+	<servlet-name>WeixinServlet</servlet-name>
+	<servlet-class>com.fulinhu.controll.WeixinServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>WeixinServlet</servlet-name>
+	<url-pattern>/wx.do</url-pattern>
+</servlet-mapping>
+<servlet>
+	<servlet-name>InitServlet</servlet-name>
+	<servlet-class>com.fulinhu.controll.InitServlet</servlet-class>
+	 <!-- 配置获取access_token所需参数appid和appsecret -->
+    <init-param>
+        <param-name>appid</param-name>
+        <param-value>wxadb19eaebee04073</param-value>
+    </init-param>
+    <init-param>
+        <param-name>appsecret</param-name>
+        <param-value>6e42f90069867cac586210800d096392</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+</servlet>
+<!-- <servlet>
+	<servlet-name>InitMeanuServlet</servlet-name>
+	<servlet-class>com.fulinhu.controll.InitMeanuServlet</servlet-class>
+	<load-on-startup>1</load-on-startup>
+</servlet> -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
